@@ -1,0 +1,93 @@
+body {
+  font-family: 'Open Sans', sans-serif
+}
+
+.formwrapper{
+  width: 261px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.heading,
+h1, h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+img {
+  width: 600px;
+}
+
+.info {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 20px 0;
+}
+
+.label,
+label {
+  display: block;
+  font-size: 12px;
+  line-height: 0.75;
+  color: #717171;
+  margin-bottom: 5px;
+}
+
+input {
+  font-size: 12px;
+  height: 30px;
+  line-height: 0.83;
+  color: #444;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  margin-bottom: 20px;
+  padding: 0 0 0 5px;
+}
+
+.captcha {
+  width: 200px;
+  height: 51px;
+  background-color: #f7f7f7;
+  border: solid 1px #ccc;
+  margin-bottom: 20px;
+}
+
+.captcha p {
+  font-family: Georgia;
+  font-size: 26px;
+  line-height: 0.73;
+  color: #444;
+  margin: 15px 0 0;
+  text-align: center;
+}
+
+
+.form-control {
+  width: 32px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #cccccc;
+}
+
+
+.submit {
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+}
