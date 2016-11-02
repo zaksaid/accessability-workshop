@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <title>Accessability Workshop</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<script>
+function isEmpty(email) {
+  return email.value === ""
+}
+
+function setElementBorderColour(email, valid) {
+  var borderColor = "";
+  valid ? borderColor = "red" : borderColor = "#ccc"
+  email.style.borderColor = borderColor
+}
+
+var validate = function () {
+  event.preventDefault()
+  var emailElement = document.getElementById("email");
+  var valid = isEmpty(emailElement);
+
+  emailElement.setAttribute("aria-invalid", valid);
+  setElementBorderColour(emailElement, valid);
+};
+</script>
+
+<body>
+
+    <h1>Welcome to PROS</h1>
+
+    <p aria-role="contentinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <h2>Sign up for PROS!</h2>
+
+    <figure aria-labelledby="operahouse_1" role="group">
+      <img src="image.png" alt="Screenshot from PROS app"/>
+        <figcaption id="operahouse_1">PROS O&D Forecast Chart</figcaption>
+    </figure>
+
+    <div class="formwrapper formwrapper-accessible">
+     <p aria-role="contentinfo" class="info info-accessible">Create an account to start using our software.</p>
+
+    <form>
+      <fieldset>
+
+        <label class="label-accessible" for="email">Email <sup>*</sup></label>
+        <input aria-required="true" aria-invalid="false" id="email" type="text"/>
+
+        <div role="group">
+          <label class="label-accessible" for="password">Create your password</label>
+          <input type="text" id="password"/>
+
+          <label class="label-accessible" for="confirm">Confirm your password</label>
+          <input type="text" id="confirm"/>
+        <div>
+
+        <div class="captcha"><p>solution</p></div>
+
+        <label class="label-accessible" for="captcha">Type the word above</label>
+        <input id="captcha" type="text"/>
+
+        <button class="form-control" aria-label="refresh captcha">
+           <i class="fa fa-refresh" aria-hidden="false"></i>
+        </button>
+        <button class="form-control" aria-label="volume up">
+           <i class="fa fa-volume-up" aria-hidden="false"></i>
+        </button>
+
+        <button onClick="validate()" class="submit"/>Continue </button>
+
+      </fieldset>
+    </form>
+
+  </div>
+</body>
+
+</html>
